@@ -25,23 +25,31 @@ const projects = [
 export default function Home() {
   return (
     <main className="site-shell">
-      <section className="hero">
-        <p className="eyebrow">Vikas Bek</p>
+      <section className="hero" id="home">
+        <div className="hero-topline">
+          <p className="eyebrow">Vikas Bek</p>
+          <nav aria-label="Primary" className="hero-nav">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
         <h1>Full Stack Developer building clean, reliable web experiences.</h1>
         <p className="lede">
           I design and ship modern applications with a focus on performance, usability, and maintainable code.
         </p>
       </section>
 
-      <section className="panel">
+      <section className="panel" id="about">
         <h2>About</h2>
         <p>
           I build responsive interfaces and end-to-end web products that balance thoughtful design with practical
-          engineering.
+          engineering. My work spans frontend polish, backend APIs, and the details that make a product feel complete.
         </p>
       </section>
 
-      <section className="panel">
+      <section className="panel" id="skills">
         <h2>Skills</h2>
         <ul className="chip-list">
           {skills.map((skill) => (
@@ -52,7 +60,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section className="panel">
+      <section className="panel" id="projects">
         <h2>Projects</h2>
         <div className="project-grid">
           {projects.map((project) => (
@@ -64,7 +72,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="panel contact">
+      <section className="panel contact" id="contact">
         <h2>Contact</h2>
         <p>Open to full stack roles, freelance projects, and product collaborations.</p>
         <a href="mailto:vikas.bek@example.com">vikas.bek@example.com</a>
